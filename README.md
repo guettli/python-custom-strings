@@ -24,7 +24,7 @@ html = format_html('''
  
  With "username" being a simple string which gets quoted. For example `Mary & Bob` will get `Mary &amp; Bob`.
  
- with "messages" being a previously escaped string. For example "<ul><li>line1</li><li>line2</li></ul>". It does not get escaped, since it is
+ with "messages" being a previously escaped string. For example `<ul><li>line1</li><li>line2</li></ul>`. It does not get escaped, since it is
  already escaped.
  
 This "magic" detection wheter escaping should be done or not gets handled by `conditional_escape()`. 
