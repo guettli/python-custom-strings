@@ -69,6 +69,19 @@ Python does not know about these methods `mark_safe()` and `conditional_escape()
 
 So we need a way to define that.
 
+# What is inside curly braces?
+
+In above example we just use a variable name. But having more is better.
+
+Custom strings are meant for developers, so arbitrary code execution is fine.
+
+Arbitrary code in curly braces should be allowed:
+
+```
+html = h'''...{my_object.my_method(some_arg)}...'''
+```
+
+
 # Defining custom strings
 
 ```
@@ -84,4 +97,34 @@ __h__ = (mark_safe, conditional_escape)
 ```
 
 (This is just a first idea. I guess there are better ways to define both methods)
+
+# Why not just this hack?
+
+Instead of `h'...'` you could use this hack to get the desired implemenation:
+
+```
+def h(html):
+    """
+    Django's format_html() on steroids
+    """
+    def replacer(match):
+        call_frame = sys._getframe(3)
+        return conditional_escape(
+            eval(match.group(1), call_frame.f_globals, call_frame.f_locals))
+    return mark_safe(re.sub(r'{(.*?)}', replacer, html))
+```
+
+The above implementation has one big drawback:
+
+IDEs and linters don't know that variables get used inside the custom string.
+
+This means IDEs and linters think variables (or imports) don't get used and
+act accordingly.
+
+But it makes no sense to type `myvar=mvar` again and again, just to make IDEs/linters happy.
+    
+
+# PEP?
+
+Do you think this could make it to a PEP? Please let me know: Just create an issue here at github.
 
