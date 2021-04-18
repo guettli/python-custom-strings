@@ -39,7 +39,7 @@ html = h'''
  Your messages: {messages}'''
 ```
 
-The developer should not need to type these lines:
+The developer should not need to type these line, to reduce the cognitive load:
 ```
      username=username,
      messages=messages
