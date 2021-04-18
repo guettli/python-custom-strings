@@ -7,7 +7,7 @@ Python Custom Strings want to combine two great things:
 
 Python Custom Strings is a proposal to enhance Python, to give developers new ways to create strings.
 
-The Python Custom Strings proposal is not related to Django or HTML. This text uses HTML and Django as an example. 
+The Python Custom Strings proposal is not related to Django or HTML. This text uses HTML and Django just as an example. 
 
 # Motivation
 
