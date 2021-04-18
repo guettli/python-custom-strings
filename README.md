@@ -86,6 +86,10 @@ html = h'''...{my_object.my_method(some_arg)}...'''
 
 # Defining custom strings
 
+Per file there must be a dinition of the custom strings which get used in this file.
+
+The syntax could look like this:
+
 ```
 __h__ = (pre_return, pre_insert)
 ```
