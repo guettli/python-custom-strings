@@ -22,16 +22,16 @@ html = format_html('''
      )
  ```
  
- With "username" being a simple string which gets quoted. For example `Mary & Bob` will get `Mary &amp; Bob`.
+ With "username" being a simple string that gets quoted. For example `Mary & Bob` will get `Mary &amp; Bob`.
  
  with "messages" being a previously escaped string. For example `<ul><li>line1</li><li>line2</li></ul>`. It does not get escaped, since it is
  already escaped.
  
-This "magic" detection wheter escaping should be done or not gets handled by `conditional_escape()`. 
+This "magic" detection whether escaping should be done or not gets handled by `conditional_escape()`. 
 
 # Goal
 
-I would like to shorted above code to something similar to this:
+I would like to shorten the above code to something similar to this:
 
 ```
 html = h'''
@@ -48,9 +48,9 @@ These lines are meaningless and distracting.
 
 # Customization
 
-To make this customaziable, the user needs to define the methods which should get used.
+To make this customizable, the user needs to define the methods which should get used.
 
-In above example the `h` prefix of this snippet:
+In the above example the `h` prefix of this snippet:
 
 ```
 html = h'''
@@ -73,7 +73,7 @@ So we need a way to define that.
 
 # What is inside curly braces?
 
-In above example we just use a variable name. But having more is better.
+In the above example, we just use a variable name. But having more is better.
 
 Custom strings are meant for developers, so arbitrary code execution is fine.
 
@@ -86,7 +86,7 @@ html = h'''...{my_object.my_method(some_arg)}...'''
 
 # Defining custom strings
 
-Per file there must be a dinition of the custom strings which get used in this file.
+Per file, there must be a definition of the custom strings which get used in this file.
 
 The syntax could look like this:
 
@@ -96,7 +96,7 @@ __h__ = (pre_return, pre_insert)
 
 With `pre_return()` and `pre_insert()` being methods which get executed to create the custom string.
 
-In above example you would use this:
+In the above example you would use this:
 
 ```
 __h__ = (mark_safe, conditional_escape)
@@ -106,7 +106,7 @@ __h__ = (mark_safe, conditional_escape)
 
 # Why not just this hack?
 
-Instead of `h'...'` you could use this hack to get the desired implemenation:
+Instead of `h'...'` you could use this hack to get the desired implementation:
 
 ```
 def h(html):
@@ -132,5 +132,5 @@ But it makes no sense to type `myvar=mvar` again and again, just to make IDEs/li
 
 # PEP?
 
-Do you think this could make it to a PEP? Please let me know: Just create an issue here at github.
+Do you think this could make it to a PEP? Please let me know: Just create an issue here at Github.
 
