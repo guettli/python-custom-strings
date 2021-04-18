@@ -1,6 +1,6 @@
 # Python Custom Strings
 
-Python Custom Strings want to combine two things:
+Python Custom Strings want to combine two great things:
 
 * Python's [f-strings](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) are great
 * Django's [conditional_escape()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.conditional_escape) is great.
