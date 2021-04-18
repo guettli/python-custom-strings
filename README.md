@@ -129,6 +129,15 @@ act accordingly.
 
 But it makes no sense to type `myvar=mvar` again and again, just to make IDEs/linters happy.
     
+# Background
+
+If you use the html-fragments-over-the-wire approach to web development (for example with [htmx](//htmx.org)),
+then you create many small methods returning small html snippets.
+
+It simplifies reading the code if you have small methods to keep the HTML in one file near your Python logic.
+
+I guess a lot of people won't like this. Nevertheless some people like to mix Python and HTML. Those people
+who don't like this, still can create HTML in the way they like it.
 
 # PEP?
 
