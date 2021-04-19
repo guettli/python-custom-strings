@@ -55,12 +55,13 @@ In the above example the `h` prefix of this snippet:
 
 ```
 html = h'''
-html = h'''
  <h1>Hi {username}</h1>
  Your messages: {messages}'''
+```
 
 Should be executed like
 
+```
 html = mark_safe('''
  <h1>Hi {username}</h1>
  Your messages: {messages}''', 
