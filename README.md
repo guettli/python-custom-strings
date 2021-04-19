@@ -73,17 +73,6 @@ Python does not know about these methods `mark_safe()` and `conditional_escape()
 
 So we need a way to define that.
 
-# What is inside curly braces?
-
-In the above example, we just use a variable name. But having more is better.
-
-Custom strings are meant for developers, so arbitrary code execution is fine.
-
-Arbitrary code in curly braces should be allowed:
-
-```
-html = h'''...{my_object.my_method(some_arg)}...'''
-```
 
 
 # Defining custom strings
@@ -105,6 +94,18 @@ __h__ = (mark_safe, conditional_escape)
 ```
 
 (This is just a first idea. I guess there are better ways to define both methods)
+
+# What is inside curly braces?
+
+In the above example, we just use a variable name. But having more is better.
+
+Custom strings are meant for developers, so arbitrary code execution is fine.
+
+Arbitrary code in curly braces should be allowed:
+
+```
+html = h'''...{my_object.my_method(some_arg)}...'''
+```
 
 # Why not just this hack?
 
