@@ -39,12 +39,13 @@ html = h'''
  Your messages: {messages}'''
 ```
 
-The developer should not need to type these line, to reduce the cognitive load:
+The developer should not need to type these line:
 ```
      username=username,
      messages=messages
 ```
-These lines are meaningless and distracting.
+These lines are meaningless and distracting. Avoiding them reduces the cognitive load, 
+especially to the reader of the code.
 
 # Customization
 
