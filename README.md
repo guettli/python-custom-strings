@@ -95,6 +95,10 @@ __h__ = (mark_safe, conditional_escape)
 
 (This is just a first idea. I guess there are better ways to define both methods)
 
+The letter `h` is just an example. The developer should be able to choose his prefered
+character. Replacing the already used letteres like `r`, `b`, `u` is not possible and 
+results in an exception.
+
 # What is inside curly braces?
 
 In the above example, we just use a variable name. But having more is better.
