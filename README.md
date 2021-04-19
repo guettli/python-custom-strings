@@ -45,7 +45,7 @@ The developer should not need to type these line:
      messages=messages
 ```
 These lines are meaningless and distracting. Avoiding them reduces the cognitive load, 
-especially to the reader of the code.
+especially for the reader of the code.
 
 # Customization
 
