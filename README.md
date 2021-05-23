@@ -5,7 +5,7 @@ Python Custom Strings want to combine two great things:
 * Python's [f-strings](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) are great
 * Django's [conditional_escape()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.conditional_escape) is great.
 
-Python Custom Strings is a proposal to enhance Python, to give developers new ways to create strings.
+Python Custom Strings is a proposal to enhance Python, to give developers new ways to create escaped strings.
 
 The Python Custom Strings proposal is not related to Django or HTML. This text uses HTML and Django just as an example. 
 
@@ -24,7 +24,7 @@ html = format_html('''
  
  With "username" being a simple string that gets quoted. For example `Mary & Bob` will get `Mary &amp; Bob`.
  
- with "messages" being a previously escaped string. For example `<ul><li>line1</li><li>line2</li></ul>`. It does not get escaped, since it is
+ With "messages" being a previously escaped string. For example `<ul><li>line1</li><li>line2</li></ul>`. It does not get escaped, since it is
  already escaped.
  
 This "magic" detection whether escaping should be done or not gets handled by `conditional_escape()`. 
@@ -93,7 +93,8 @@ In the above example you would use this:
 __h__ = (mark_safe, conditional_escape)
 ```
 
-(This is just a first idea. I guess there are better ways to define both methods)
+This is just a first idea. I guess there are better ways to define both methods. Please speak up if you
+have a better idea.
 
 The letter `h` is just an example. The developer should be able to choose his prefered
 character. Replacing the already used letteres like `r`, `b`, `u` is not possible and 
@@ -134,14 +135,14 @@ IDEs and linters don't know that variables get used inside the custom string.
 This means IDEs and linters think variables (or imports) don't get used and
 act accordingly.
 
-But it makes no sense to type `myvar=mvar` again and again, just to make IDEs/linters happy.
+Nevertheless it makes no sense to type `myvar=mvar` again and again, just to make IDEs/linters happy.
     
 # Background
 
 If you use the html-fragments-over-the-wire approach to web development (for example with [htmx](//htmx.org)),
 then you create many small methods returning small html snippets.
 
-If you have small methods, then keeping the HTML in one file near your Python logic simplifies the development process.
+If you have small methods, then keeping the HTML inside one file together with your Python logic simplifies the development process. (See [Locality of Behaviour (LoB)](https://htmx.org/essays/locality-of-behaviour/))
 
 I guess a lot of people won't like this. Nevertheless some people like to mix Python and HTML. Those people
 who don't like this, still can create HTML in the way they like it.
