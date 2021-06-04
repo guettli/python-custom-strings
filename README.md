@@ -11,7 +11,7 @@ The Python Custom Strings proposal is not related to Django or HTML. This text u
 
 # Motivation
 
-I could create HTML in Python with the help of [format_html()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.format_html) like this:
+I could create HTML in Python with the help of [Django's format_html()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.format_html) like this:
 
 ```
 html = format_html('''
@@ -27,7 +27,7 @@ html = format_html('''
  With "messages" being a previously escaped string. For example `<ul><li>line1</li><li>line2</li></ul>`. It does not get escaped, since it is
  already escaped.
  
-This "magic" detection whether escaping should be done or not gets handled by `conditional_escape()`. 
+This "magic" detection whether escaping should be done or not gets handled by [conditional_escape()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.conditional_escape).
 
 # Goal
 
