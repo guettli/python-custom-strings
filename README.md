@@ -29,6 +29,10 @@ html = format_html('''
  
 This "magic" detection whether escaping should be done or not gets handled by [conditional_escape()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.conditional_escape).
 
+# Next
+
+Check [PEP 501 -- General purpose string interpolation](https://www.python.org/dev/peps/pep-0501/)
+
 # Goal
 
 I would like to shorten the above code to something similar to this:
