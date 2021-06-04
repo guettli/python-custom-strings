@@ -77,12 +77,14 @@ So we need a way to define that.
 
 # Defining custom strings
 
-Per file, there must be a definition of the custom strings which get used in this file.
+
+
+Somehow, there needs to be a definition of the custom strings. Up to now I open concerning "how to define custom strings?".
 
 The syntax could look like this:
 
 ```
-__h__ = (pre_return, pre_insert)
+register_custom_string('h', pre_return, pre_insert)
 ```
 
 With `pre_return()` and `pre_insert()` being methods which get executed to create the custom string.
@@ -90,7 +92,7 @@ With `pre_return()` and `pre_insert()` being methods which get executed to creat
 In the above example you would use this:
 
 ```
-__h__ = (mark_safe, conditional_escape)
+register_custom_string('h', mark_safe, conditional_escape)
 ```
 
 This is just a first idea. I guess there are better ways to define both methods. Please speak up if you
@@ -99,6 +101,8 @@ have a better idea.
 The letter `h` is just an example. The developer should be able to choose his prefered
 character. Replacing the already used letteres like `r`, `b`, `u` is not possible and 
 results in an exception.
+
+TODO: What should happen if `register_custom_string()` gets called twice for the same character?
 
 # What is inside curly braces?
 
@@ -141,7 +145,11 @@ Nevertheless it makes no sense to type `myvar=mvar` again and again, just to mak
 
 "Custom strings will downgrade Python to the level of PHP".
 
-I think: "Relax". If you don't like it, then just don't use it.
+I think Separation of Concerns makes sense. But sometimes [Locality of Behaviour](https://htmx.org/essays/locality-of-behaviour/) makes more sense.
+
+It really depends on the context. Sometimes it makes sense to have external templates, sometimes it makes senes to have inline templates.
+
+Don't judge this proposal just because your context never requires external templates.
 
 # Background
 
