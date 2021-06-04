@@ -2,8 +2,8 @@
 
 Python Custom Strings want to combine two great things:
 
-* Python's [f-strings](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) are great
-* Django's [conditional_escape()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.conditional_escape) is great.
+* Python's [f-strings](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals)
+* Django's [conditional_escape()](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.html.conditional_escape)
 
 Python Custom Strings is a proposal to enhance Python, to give developers new ways to create escaped strings.
 
