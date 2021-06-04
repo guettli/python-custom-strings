@@ -137,6 +137,12 @@ act accordingly.
 
 Nevertheless it makes no sense to type `myvar=mvar` again and again, just to make IDEs/linters happy.
     
+# Concerns
+
+"Custom strings will downgrade Python to the level of PHP".
+
+I think: "Relax". If you don't like it, then just don't use it.
+
 # Background
 
 If you use the html-fragments-over-the-wire approach to web development (for example with [htmx](//htmx.org)),
