@@ -33,6 +33,17 @@ This "magic" detection whether escaping should be done or not gets handled by [c
 
 Check [PEP 501 -- General purpose string interpolation](https://www.python.org/dev/peps/pep-0501/)
 
+# HTML specific or generic?
+
+The solution could be specific to HTML or it could be generic.
+
+Although "generic" usualy means "better", in this context an implementation
+specific to HTML might have a benefit.
+
+Imagine you could share code which creates HTML via different frameworks like
+Django, Flask, FastAPI.
+
+
 # Goal
 
 I would like to shorten the above code to something similar to this:
