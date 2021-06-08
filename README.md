@@ -33,6 +33,8 @@ This "magic" detection whether escaping should be done or not gets handled by [c
 
 Check [PEP 501 -- General purpose string interpolation](https://www.python.org/dev/peps/pep-0501/)
 
+Check [JS Tagged Templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)
+
 # HTML specific or generic?
 
 The solution could be specific to HTML or it could be generic.
