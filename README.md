@@ -1,5 +1,12 @@
 # Python Custom Strings
 
+This text is old. 
+
+Current version: https://github.com/guettli/peps/blob/master/pep-9999.rst
+
+---
+
+
 Python Custom Strings want to combine two great things:
 
 * Python's [f-strings](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals)
